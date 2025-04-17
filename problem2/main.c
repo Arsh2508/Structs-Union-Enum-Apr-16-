@@ -32,7 +32,7 @@ int main()
 		printf("Enter price: ");
 		scanf("%f", &cars[i].price);
 	
-		while(getchar() != '\n');
+		while(getchar() != '\n');	//removing all \n form buffer for using fgets
 	}
 	find(cars, n);
 
