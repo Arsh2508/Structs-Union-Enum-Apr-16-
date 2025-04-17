@@ -18,6 +18,6 @@ int main()
 	ob.c = 'A';
 	printf("int: %d float: %f char: %c\n", ob.a, ob.b, ob.c);
 	
-	printf("Size of union: %lu\n", sizeof(ob));
+	printf("Size of union: %lu\n", sizeof(ob));	
 	return 0;
 }
