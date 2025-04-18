@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "car.h"
 
+void Car_input(struct Car*);
 struct Car* compareCars(struct Car*,struct Car*);
 void input(char *, int);
 int main()
@@ -10,27 +11,10 @@ int main()
 	struct Car* car;
 
 	printf("Enter car1's details\n");
-
-	printf("Enter brand: ");
-	input(car1.brand, 20);
-	printf("Enter model: ");
-	input(car1.model, 20);
-	printf("Enter year: ");
-	scanf("%d", &car1.year);
-	printf("Enter price: ");
-	scanf("%f", &car1.price);
-	while(getchar() != '\n');
+	Car_input(&car1);
 
         printf("\nEnter car2's details\n");
-        
-        printf("Enter brand: ");
-        input(car2.brand, 20);
-        printf("Enter model: ");
-        input(car2.model, 20);
-        printf("Enter year: ");
-        scanf("%d", &car2.year);
-        printf("Enter price: ");                        
-        scanf("%f", &car2.price);   
+	Car_input(&car2);
 
 	car = compareCars(&car1, &car2);
 	printf("\nThe more expensive car is: %s %s - $%.2f\n", car->brand, car->model, car->price);
