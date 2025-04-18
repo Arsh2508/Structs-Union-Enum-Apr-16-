@@ -1,10 +1,5 @@
 #include <stdio.h>
-
-union Data{
-	int a;
-	float b;
-	char c;
-};
+#include "union.h"
 
 int main()
 {
