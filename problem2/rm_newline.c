@@ -1,11 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
-void input(char * st, int n){  
-	
-	fgets(st, n, stdin);
-
-       	char * find = strchr(st, '\n');
+void rm_newline(char * st){             //function for using fgets without newlines
+        char * find = strchr(st, '\n');
         if(find){
                 *find = '\0';
         }
@@ -13,5 +10,4 @@ void input(char * st, int n){
                 while(getchar() != '\n');
         }
 }
-
 
