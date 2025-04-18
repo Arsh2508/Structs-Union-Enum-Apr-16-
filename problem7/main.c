@@ -1,9 +1,5 @@
 #include <stdio.h>
-
-union Value{
-	int a;
-	float b;
-};
+#include "union.h"
 
 int main()
 {
